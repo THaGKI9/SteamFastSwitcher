@@ -1,0 +1,26 @@
+﻿<Window x:Name="WindowSetting" x:Class="SteamFastSwitcher.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteamFastSwitcher"
+        mc:Ignorable="d"
+        Title="Setting" Height="137.778" Width="480" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Loaded="WindowSetting_Loaded">
+    <Grid>
+        <StackPanel Margin="10,10,9.667,0" Height="79" VerticalAlignment="Top">
+            <Grid Margin="0,0,-0.333,0" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Steam execution path:" VerticalAlignment="Top" Padding="5" Height="26" Grid.Column="0" Margin="0,0,0,0"/>
+                <TextBox x:Name="TextBoxSteamExecPath" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0.333,0,0,0" Grid.Column="1" IsReadOnly="True"/>
+                <Button x:Name="ButtonBrowse" Content="Browse" Grid.Column="2" Padding="5,1" Click="ButtonBrowse_Click"/>
+            </Grid>
+            <CheckBox x:Name="CheckBoxAutoStart" Content="Automatically start with Windows" Margin="0,10,-0.333,0"/>
+            <CheckBox x:Name="CheckBoxHideWhenMinimized" Content="Minimized to tray when close button is clicked" Margin="0,10,-0.333,0"/>
+        </StackPanel>
+        <Button x:Name="ButtonSave" Content="Save" HorizontalAlignment="Right" Margin="0,0,9.667,10" Width="59" Height="26" VerticalAlignment="Bottom" Click="ButtonSave_Click"/>
+    </Grid>
+</Window>
